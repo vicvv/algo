@@ -1,8 +1,9 @@
-# function takes a positive integer and returns all the posible valid strings that you 
-# can generate with <div> tag
+'''function takes a positive integer and returns all the posible valid strings that you 
+can generate with <div> tag
 
-# O((2N)!)/((n!((n+1)))) Time | O((2N)!)/((n!((n+1)))) space where N is a number of inputs
+O((2N)!)/((n!((n+1)))) Time | O((2N)!)/((n!((n+1)))) space where N is a number of inputs'''
 
+import unittest
 def generateDivTags(numberOfTags):
     matchingtags = []
     generateTags(numberOfTags, numberOfTags,"", matchingtags)
@@ -21,13 +22,9 @@ def generateTags(openingTagsNeeded, closingTagsNeeded,prefix, result):
         result.append(prefix)
 
 
-
-import unittest
-
-
 class TestProgram(unittest.TestCase):
     def test_case_1(self):
-        input = 3
+        inp = 3
         expected = [
             "<div><div><div></div></div></div>",
             "<div><div></div><div></div></div>",
@@ -35,8 +32,9 @@ class TestProgram(unittest.TestCase):
             "<div></div><div><div></div></div>",
             "<div></div><div></div><div></div>",
         ]
-        actual = generateDivTags(input)
+        actual = generateDivTags(inp)
         self.assertEqual(actual, expected)
 
 if __name__ == "__main__":
     unittest.main()
+    

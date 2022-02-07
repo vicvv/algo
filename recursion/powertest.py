@@ -1,21 +1,36 @@
 '''
 function takes in an array of unique integers and returns its powerset
 '''
-# O(n*2^n) time and space
+# O(n*2^n) time and O(n*2^n) space
 import unittest
 
-
-def powerset(array):
-    mypowset =[[]]
-    for num in array:
-        for i in range(len(mypowset)):   
-            curSet = mypowset[i]
-            print("curSet:",curSet, "after append" ,curSet + [num])
-            mypowset.append(curSet + [num])
-            print("mpt",mypowset)
+# non recursive solution
+# def powerset(array):
+#     mypowset =[[]]
+#     for num in array:
+#         for i in range(len(mypowset)):   
+#             curSet = mypowset[i]
+#             print("curSet:",curSet, "after append" ,curSet + [num])
+#             mypowset.append(curSet + [num])
+#             print("mpt",mypowset)
     
-    return mypowset
+#     return mypowset
 
+
+def powerset(array, idx=None):
+    if idx is None:
+        idx = len(array)-1
+    if idx < 0:
+        return [[]]
+
+    ele = array[idx]
+    subsets = powerset(array, idx-1)
+    
+    for i in range(len(subsets)):
+        curSubset = subsets[i]
+        subsets.append(curSubset + [ele])
+
+    return subsets
 
 
 

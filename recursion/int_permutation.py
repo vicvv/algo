@@ -1,20 +1,19 @@
-
 import unittest
 
-# # upper bound: O(n^2*n!) time | O(n*n!)space
-# def getPermutations(array):
-#     perms = []  
-#     permhelper(array,[],perms)
-#     return perms
+'''# upper bound: O(n^2*n!) time | O(n*n!)space
+def getPermutations(array):
+    perms = []  
+    permhelper(array,[],perms)
+    return perms
 
-# def permhelper(array, currPerms, perms):
-#     if not array and currPerms:
-#         perms.append(currPerms)
-#     else:
-#         for i in range(len(array)):
-#             newArray = array[:i] + array[i + 1:]
-#             newPerms = currPerms + [array[i]]
-#             permhelper(newArray,newPerms,perms)
+def permhelper(array, currPerms, perms):
+    if not array and currPerms:
+        perms.append(currPerms)
+    else:
+        for i in range(len(array)):
+            newArray = array[:i] + array[i + 1:]
+            newPerms = currPerms + [array[i]]
+            permhelper(newArray,newPerms,perms)'''
         
 
 # O(n * n!) time | same space
@@ -24,20 +23,20 @@ def getPermutations(array):
     return permutation
 
 def permutationHelper(i, array, permutation):
-	if i == len(array) - 1:
-		permutation.append(array[:])
-	else:
-		for j in range(i, len(array)):
-			swap(array, i,j)
-			permutationHelper(i+1,array, permutation)
-			swap(array, i,j)
+    if i == len(array) - 1:
+        permutation.append(array[:])
+    else:
+        for j in range(i, len(array)):
+            swap(array, i,j)
+            permutationHelper(i+1,array, permutation)
+            swap(array, i,j)
 def swap(array,i,j):
-	array[i], array[j] = array[j], array[i]
+    array[i], array[j] = array[j], array[i]
     
 
 
-array = [1, 2, 3]
-print(getPermutations(array))
+arr = [1, 2, 3]
+print(getPermutations(arr))
 
 class TestProgram(unittest.TestCase):
     def test_case_1(self):

@@ -1,4 +1,5 @@
-# Feel free to add new properties and methods to the class.
+# MinMax stack that allows instant access to min max val in the stack as well
+# as push, pop, pick(last values set)
 
 
 

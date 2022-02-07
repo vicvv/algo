@@ -7,7 +7,7 @@ def generateParenthesis(n):
     dfs(n - 1, n, '(', matchingperents)
     return matchingperents
 
-def dfs( left, right, s, result,):
+def dfs(left, right, s, result):
     if (left == 0 and right == 0):
         result.append(s)
 

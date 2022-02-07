@@ -38,3 +38,11 @@ def unique_in_order(sequence):
 
 def unique_in_order(s):
   return [x for i, x in enumerate(s) if i == 0 or s[i - 1] != s[i]]
+
+
+def delete_occurrences(lst, num):
+  return [x for n, x in enumerate(lst) if lst[:n].count(x)<num]
+  
+print(delete_occurrences([1, 1, 1, 1], 2))
+print(delete_occurrences([13, True, 13, None], 1))
+print(delete_occurrences([True, True, True], 1))

@@ -51,11 +51,19 @@
 # Tabulated (bottom up) version 
 def getNthFib(n): 
 	f = [0]*(n+1) 
-	f[1] = 1
+	if n>0: f[1] = 1
 	for i in range(2 , n+1): 
 		f[i] = f[i-1] + f[i-2] 
 
 	return f[n-1] 
+
+# fup from edabit:
+# def getNthFib(n):
+#     x, y = 0, 1
+#     for i in range(n):
+#         x, y = y, x+y
+#     return x
+
 
 
 import unittest
@@ -113,6 +121,8 @@ class TestProgram(unittest.TestCase):
 
     def test_case_18(self):
         self.assertEqual(getNthFib(18), 1597)
+    def test_case_19(self):
+        self.assertEqual(getNthFib(0), 0)
 
 if __name__ == "__main__":
     unittest.main()
