@@ -7,7 +7,7 @@ class SLNode:
 class SList:
     count = 0
     def __init__(self):
-        self.head = None
+        self.head = SLNode(0)
 
     def add_to_front(self, data):
         
@@ -129,11 +129,11 @@ class SList:
 
 my_list = SList()	# create a new instance of a list
 print("\n\nCreating new linked list:  ", end ='')
-my_list.add_to_front("Topa,").add_to_front("FirstToFornt,").add_to_back("Vita").print_values()
+my_list.add_to_front("TPP,").add_to_front("FirstToFornt,").add_to_back("VTT").print_values()
 print("\nTotal Nodes Count in the list:", my_list.count)
 
 print("\nInserting new node at positon 2 and 3:")
-my_list.insert_at('Paul,',2).insert_at('Hester,',3).print_values()
+my_list.insert_at('PPL,',2).insert_at('COT,',3).print_values()
 print("\nTotal Nodes Count in the list:", my_list.count)
 
 print("\n**********************\n")
@@ -157,36 +157,3 @@ my_list.remove_from_back().print_values()
 print("\nTotal Nodes Count in the list:", my_list.count)
 my_list.remove_from_back().print_values()
 print("\nTotal Nodes Count in the list:", my_list.count)
-my_list.remove_from_back()#.print_values()
-print("\nTotal Nodes Count in the list:", my_list.count)
-my_list.remove_from_back().print_values()
-print("\nTotal Nodes Count in the list:", my_list.count)
-my_list.remove_from_back()#.print_values()
-print("\nTotal Nodes Count in the list:", my_list.count)
-my_list.remove_from_back() #.print_values()
-print("\nTotal Nodes Count in the list:", my_list.count)
-
-
-
-
-import unittest
-class TestProgram(unittest.TestCase):
-    def test1(self):
-        test = SList()
-        test.add_to_front("Topa,").add_to_front("FirstToFornt,").add_to_back("Vita")
-
-
-# class TestProgram(unittest.TestCase):
-#     def test_case_1(self):
-#         test = LinkedList(1).addMany([1, 3, 4, 4, 4, 5, 6, 6])
-#         original=test.getNodesInArray()
-#         expected = LinkedList(1).addMany([3, 4, 5, 6])
-#         eb=expected.getNodesInArray()
-#         removeDuplicatesFromLinkedList(test)
-#         ar = expected.getNodesInArray()
-#         print(original, ar,eb)
-#         self.assertEqual(ar, eb)
-
-
-if __name__ == "__main__":
-    unittest.main()

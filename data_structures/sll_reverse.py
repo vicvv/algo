@@ -1,5 +1,4 @@
-
-
+#reversing SLL
 class Node:
     def __init__(self, value):
         self.value = value
@@ -45,13 +44,23 @@ class Slist:
             temp1 = runner 
             runner = temp2
         self.head = runner
+        return self.head
+        
+
+
+    # def reverseList(self):
+    #     prev, curr = None, self.head
+    #     while curr:
+    #         curr.next, prev, curr = prev, curr, curr.next
+        
 
 mylist = Slist()
-mylist.addfront(1)
-mylist.addfront(2)
 mylist.addfront(3)
+mylist.addfront(2)
+mylist.addfront(1)
 
 mylist.printlist()
 print('\n','#'*50)
 mylist.reverse_list()
+#mylist.reverseList()
 mylist.printlist()

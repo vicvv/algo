@@ -1,15 +1,15 @@
 '''
-Given the number of pairs of parentheses, return an array of strings, 
-where each string represents a different valid way to order those parentheses. 
+Given the number of pairs of Parentheses, return an array of strings, 
+where each string represents a different valid way to order Parentheses. 
 Example: given 2, return ["()()", "(())"].
 '''
 '''
-len(printParenthesis(4)) to return 14
-len(printParenthesis(6)) to return 132
-len(printParenthesis(7)) to return 429
+len(printParentheses(4)) to return 14
+len(printParentheses(6)) to return 132
+len(printParentheses(7)) to return 429
 '''
 
-def printParenthesis(num):
+def printParentheses(num):
     ans = []
     start = ''
     helper(start, 0, 0, num, ans)
@@ -31,11 +31,11 @@ import unittest
 
 class TestProgram(unittest.TestCase):
     def test1(self):
-        self.assertEqual(printParenthesis(4),14)
+        self.assertEqual(printParentheses(4),14)
     def test2(self):
-        self.assertEqual(printParenthesis(6),132)
+        self.assertEqual(printParentheses(6),132)
     def test3(self):
-        self.assertEqual(printParenthesis(7),429)
+        self.assertEqual(printParentheses(7),429)
 
 if __name__ == "__main__":
     unittest.main()

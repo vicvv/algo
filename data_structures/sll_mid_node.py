@@ -1,21 +1,21 @@
 # Definition for singly-linked list.
 class ListNode:
-    def __init__(self, val=None, next=None):
+    def __init__(self, val=None):
         self.val = val
-        self.next = next
+        self.next = None
 
 #here add function to create a linked list from array
-def createList(nodes):
+def createList(arr):
     head = ListNode()
     current = head
-    for v in nodes:
+    for v in arr:
         toadd = ListNode(v)
         toadd.next = current.next
         current.next = toadd
     return head
 
-def middleNode(nodes):
-    head = createList(nodes)
+def middleNode(arr):
+    head = createList(arr)
     slow = fast = head
     while fast and fast.next:
         slow = slow.next
@@ -23,4 +23,4 @@ def middleNode(nodes):
         
     return slow.val
 
-print(middleNode([1,2,3,4,5]))
+print(middleNode([1,2,3,4,5,6,7]))

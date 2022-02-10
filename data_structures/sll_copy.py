@@ -1,9 +1,11 @@
 import copy 
+
 class _ListNode:
     def __init__(self, value, next_):
         self._value = copy.deepcopy(value)
         self._next = next_
         return
+
 class List(_ListNode):
     def __init__(self):
         self._front = None
