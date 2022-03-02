@@ -48,7 +48,7 @@ class BST:
                 if currentNode.left is not None and currentNode.right is not None:
                      currentNode.value = currentNode.right.getMinvalue()
                      # currentNode.value = to the smallest value in the right subtress
-                     currentNode.right.remove  (currentNode.value,currentNode)
+                     currentNode.right.remove (currentNode.value,currentNode)
                 # case when we have one child ither on left or right side
                 elif parentNode is None:
                     if currentNode.left is not None:
@@ -65,7 +65,7 @@ class BST:
                 elif parentNode.left == currentNode:
                      parentNode.left = currentNode.left if currentNode.left is not None else currentNode.right
                 elif parentNode.right == currentNode:
-                    parentNode.right == currentNode.right if currentNode.left is not None else currentNode.right
+                    parentNode.right = currentNode.right if currentNode.left is not None else currentNode.right
                 break
         return self
 

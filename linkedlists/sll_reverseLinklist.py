@@ -4,13 +4,19 @@
 # O(n) time | O(1) space
 
 def reverseLinkedList(head):
-    p1, p2 = None, head
-    while p2 is not None:
-        p3 = p2.next
-        p2.next = p1
-        p1 = p2
-        p2 = p3
-    return p1
+    previous, current = None, head
+    while current:
+        temp = current.next
+        current.next = previous
+        previous = current
+        current = temp
+    return previous
+
+# def reverse_list(self):
+#     prev, curr = None, self.head
+#     while curr:
+#         curr.next, prev, curr = prev, curr, curr.next
+#     return prev
 
 
 import unittest

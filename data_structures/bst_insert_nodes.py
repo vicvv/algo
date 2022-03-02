@@ -38,8 +38,12 @@ class BST:
             print(node.value)
             self._traverse(node.right)
                 
+
+
+
 bst = BST()
 bst.add(5)
+
 
 bst.add(3)
 bst.add(7)
@@ -53,3 +57,4 @@ bst.traverse()
 #     3     7
 #    / \      \
 #   1   4     10
+

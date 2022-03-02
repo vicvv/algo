@@ -36,7 +36,7 @@ class BST:
         if value < self.value:
             if self.left is not None:
                 self.left.remove(value, self)
-        elif value>self.value:
+        elif value > self.value:
             if self.right is not None:
                 self.right.remove(value, self)
         else:

@@ -1,6 +1,6 @@
 # create as balanced tree as possible
 
-array = [1, 2, 5, 7, 10, 13, 14, 15, 22]
+arr = [1, 2, 5, 7, 10, 13, 14, 15, 22]
 
 # # Time O(nlogn) | space O(n)  using provided insert which adds log(N) to time
 # def minHeightBst(array):
@@ -24,25 +24,25 @@ def minHeightBst(array):
     return minHelper(array, None, 0, len(array) -1)
 
 def minHelper(array, bst, start, end):
-	if end < start:
-		return
-	mid = (start + end)//2
-	newNode = BST(array[mid])
-	
-	if bst is None: 
-		bst = newNode
-	else:
-		if array[mid] < bst.value:
-			bst.left = newNode
-			bst = bst.left
-		else:
-			bst.right = newNode
-			bst = bst.right
-	
-	
-	minHelper(array, bst, start, mid-1)
-	minHelper(array, bst, mid+1, end)
-	return bst
+    if end < start:
+        return
+    mid = (start + end) >> 1
+    newNode = BST(array[mid])
+
+    if bst is None: 
+        bst = newNode
+    else:
+        if array[mid] < bst.value:
+            bst.left = newNode
+            bst = bst.left
+        else:
+            bst.right = newNode
+            bst = bst.right
+
+
+    minHelper(array, bst, start, mid-1)
+    minHelper(array, bst, mid+1, end)
+    return bst
 
 class BST:
     def __init__(self, value):
@@ -50,17 +50,17 @@ class BST:
         self.left = None
         self.right = None
 
-    def insert(self, value):
-        if value < self.value:
-            if self.left is None:
-                self.left = BST(value)
-            else:
-                self.left.insert(value)
-        else:
-            if self.right is None:
-                self.right = BST(value)
-            else:
-                self.right.insert(value)
+    # def insert(self, value):
+    #     if value < self.value:
+    #         if self.left is None:
+    #             self.left = BST(value)
+    #         else:
+    #             self.left.insert(value)
+    #     else:
+    #         if self.right is None:
+    #             self.right = BST(value)
+    #         else:
+    #             self.right.insert(value)
 
 
 
@@ -114,6 +114,6 @@ class TestProgram(unittest.TestCase):
 #     unittest.main()
 
 
-bst = minHeightBst(array)
-arr = inOrderTraverse(bst, [])
+bstree = minHeightBst(arr)
+arr = inOrderTraverse(bstree, [])
 print(arr)

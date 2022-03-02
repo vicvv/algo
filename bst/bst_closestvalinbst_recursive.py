@@ -4,19 +4,19 @@ Find the closest value in BST to given target value'''
 
 # O(log N) time | O(log N) space
 def findClosestValueInBst(tree, target):
-   print(target)
-   print(tree)
-   return findClosestValueInBstHelper(tree, target, float("inf"))
+    print(target)
+    print(tree)
+    return findClosestValueInBstHelper(tree, target, float("inf"))
 
 def findClosestValueInBstHelper (tree, target,closest):
     if tree is None:
         return closest
     if abs(target-closest) > abs(target - tree.value):
         closest = tree.value
-    
+
     if target < tree.value:
         return findClosestValueInBstHelper(tree.left, target, closest)
-    
+
     if target > tree.value:
         return findClosestValueInBstHelper(tree.right, target, closest)
     else:

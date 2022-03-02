@@ -34,24 +34,25 @@ class Slist:
 # curr = next
 
 
-    def reverse_list(self): 
-        temp1 = None
-        temp2 = None
-        runner = self.head 
-        while(runner): 
-            temp2 = runner.next
-            runner.next = temp1 
-            temp1 = runner 
-            runner = temp2
-        self.head = runner
-        return self.head
+    # def reverse_list(self): 
+    #     temp1 = None
+    #     temp2 = None
+    #     runner = self.head 
+    #     while(runner): 
+    #         temp2 = runner.next
+    #         runner.next = temp1 
+    #         temp1 = runner 
+    #         runner = temp2
+    #     self.head = runner
+    #     return self.head
         
 
 
-    # def reverseList(self):
-    #     prev, curr = None, self.head
-    #     while curr:
-    #         curr.next, prev, curr = prev, curr, curr.next
+def reverse_list(self):
+    prev, curr = None, self.head
+    while curr:
+        curr.next, prev, curr = prev, curr, curr.next
+    return prev
         
 
 mylist = Slist()

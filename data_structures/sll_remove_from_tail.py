@@ -1,10 +1,9 @@
 class Slist:
     def __init__(self):
         self.head = None
-	
-    def add(self, value):
-       
-        if self.head == None:
+        
+    def add(self, value):       
+        if self.head is None:
             self.head = Node(value)
             return
         runner = self.head

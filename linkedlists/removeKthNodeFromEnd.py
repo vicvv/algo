@@ -38,8 +38,8 @@ if hasattr(LinkedList,"LinkedList"):
 class LinkedListTest(linkedListClass):
     def addMany(self, values):
         current = self
-        while current.next is not None:
-            current = current.next
+        # while current.next is not None:
+        #     current = current.next
         for value in values:
             current.next = LinkedList(value)
             current = current.next
