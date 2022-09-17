@@ -38,8 +38,9 @@ def caesarCipherEncryptor(string, key):
     return ''.join(newLetter)
 
 def getNewLetter(letter, newKey, alphabet):
-	newLetterCode = alphabet.index(letter) + newKey
-	return alphabet[newLetterCode] if newLetterCode <= 25 else alphabet[-1 + newLetterCode % 25]
+    newLetterCode = alphabet.index(letter) + newKey
+    print(newLetterCode)
+    return alphabet[newLetterCode] if newLetterCode <= 25 else alphabet[-1 + newLetterCode % 25]
 
 string = "xyz"
 key = 54

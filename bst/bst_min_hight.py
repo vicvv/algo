@@ -1,4 +1,4 @@
-# create as balanced tree as possible
+# create as balanced tree if possible
 
 arr = [1, 2, 5, 7, 10, 13, 14, 15, 22]
 

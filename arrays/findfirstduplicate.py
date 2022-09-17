@@ -1,7 +1,7 @@
 '''
 given the array of integer for 1 to n inclusinve where n is a len 
 find the first dublicated integer. [2,1,5,3,3,2,4]  -->3 because 3
-has the lowest index
+has the lowest index than 2
 '''
 
 # def firstDuplicateValue(array):

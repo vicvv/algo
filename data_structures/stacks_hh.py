@@ -1,8 +1,8 @@
 class Stack:
     def __init__(self):
-    	self.head = None
-    	self.tail = None
-    
+        self.head = None
+        self.tail = None
+
     #add the given value to the end of the stack
     def push(self, val):
         newNode = Node(val)

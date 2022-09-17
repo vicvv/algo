@@ -1,7 +1,3 @@
-# merge 2 soreted linked lists
-
-# time O(n+m) | space O(1)
-
 class LinkedList:
     def __init__(self, value):
         self.value = value
@@ -9,28 +5,13 @@ class LinkedList:
 
 
 def mergeLinkedLists(headOne, headTwo):
-    recurciveMerge(headOne, headTwo, None)
-    return headOne if headOne.value < headTwo.value else headTwo
+    if not headOne or (headTwo and headOne.value > headTwo.value):
+        headOne, headTwo = headTwo, headOne
+    if headOne:
+        headOne.next = mergeLinkedLists(headOne.next, headTwo)
 
-def recurciveMerge(p1,p2,prev):
-	if p1 is None:
-		prev.next = p2
-		return
-	if p2 is None:
-		return
-	
-	if p1.value < p2.value:
-		recurciveMerge(p1.next,p2,p1)
-	else:
-		if prev is not None:
-			prev.next = p2
-		newP2 = p2.next
-		p2.next = p1
-		recurciveMerge(p1,newP2,p2)
+    return headOne
 
-# This file is initialized with a code version of this
-# question's sample test case. Feel free to add, edit,
-# or remove test cases in this file as you see fit!
 
 import unittest
 

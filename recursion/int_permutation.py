@@ -1,19 +1,7 @@
 import unittest
 
 '''# upper bound: O(n^2*n!) time | O(n*n!)space
-def getPermutations(array):
-    perms = []  
-    permhelper(array,[],perms)
-    return perms
-
-def permhelper(array, currPerms, perms):
-    if not array and currPerms:
-        perms.append(currPerms)
-    else:
-        for i in range(len(array)):
-            newArray = array[:i] + array[i + 1:]
-            newPerms = currPerms + [array[i]]
-            permhelper(newArray,newPerms,perms)'''
+'''
         
 
 # O(n * n!) time | same space

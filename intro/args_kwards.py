@@ -23,11 +23,11 @@ class TestProgram(unittest.TestCase):
         result = get_args_and_kwargs(*args, **kwargs)
         self.assertTrue(result)
 
-    # def test_case_3(self):
-    #     args = ["a", [2]]
-    #     kwargs = {"num": 6, "x": True}
-    #     result = get_args_and_kwargs(*args, **kwargs)
-    #     self.assertTrue(result)
+    def test_case_3(self):
+        args = ["a", [2]]
+        kwargs = {"num": 6, "x": True}
+        result = get_args_and_kwargs(*args, **kwargs)
+        self.assertTrue(result)
 
     # def test_case_4(self):
     #     args = [2, 3]

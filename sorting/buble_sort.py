@@ -7,7 +7,8 @@ def bubbleSort(array):
     counter = 0
     while not isSorted:
         isSorted = True
-        for i in range( len(array) - 1 - counter): # we substract one because we compare cur and next
+        for i in range( len(array) - 1 - counter): 
+            # we substract one because we compare cur and next
             if array[i] > array[i + 1 ]:
                 swap(array, i, i+1)
                 isSorted = False

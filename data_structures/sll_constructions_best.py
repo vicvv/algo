@@ -1,6 +1,6 @@
 
 class ListNode:
-    def __init__(self, val=None):
+    def __init__(self, val=0):
         self.val = val
         self.next = None
 
@@ -9,7 +9,7 @@ class MyLinkedList:
     def __init__(self):
         self.size = 0
         #self.head = ListNode(0)  # sentinel node as pseudo-head
-        self.head = ListNode(0) 
+        self.head = ListNode()
         
 
     def get(self, index: int) -> int:
@@ -60,16 +60,16 @@ class MyLinkedList:
             index = 0
         
         self.size += 1
-        # find predecessor of the node to be added
-        pred = self.head
+        # find tempecessor of the node to be added
+        temp = self.head
         for _ in range(index):
-            pred = pred.next
+            temp = temp.next
             
         # node to be added
         to_add = ListNode(val)
         # insertion itself
-        to_add.next = pred.next
-        pred.next = to_add
+        to_add.next = temp.next
+        temp.next = to_add
         
 
     def deleteAtIndex(self, index: int) -> None:
@@ -81,13 +81,13 @@ class MyLinkedList:
             return
         
         self.size -= 1
-        # find predecessor of the node to be deleted
-        pred = self.head
+        # find tempecessor of the node to be deleted
+        temp = self.head
         for _ in range(index):
-            pred = pred.next
+            temp = temp.next
             
-        # delete pred.next 
-        pred.next = pred.next.next
+        # delete temp.next 
+        temp.next = temp.next.next
 
     def print_values(self):
         if self.head is None:
@@ -99,6 +99,7 @@ class MyLinkedList:
             current = current.next 	# set the runner to its neighbor
         print()
         return self # once the loop is done, return self to allow for chaining
+
 #object representation function. called as class name
     def __repr__(self):
         node = self.head

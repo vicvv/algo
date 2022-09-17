@@ -55,7 +55,32 @@ def twoNumberSum(array, targetSum):
     return []
 '''
 
+'''
+# in case we have more than one pair.
+from itertools import combinations
 
+def all_pairs(lst,target):
+  return [sorted([i[0],i[1]]) for i in list(combinations(lst,2)) if i[0] + i[1] == target]
+  
+print(all_pairs([2, 4, 5, 3, 1], 7))
+print(all_pairs([5, 3, 9, 2, 1], 3))
+print(all_pairs([8, 7, 7, 2, 4, 6], 14))
+print(all_pairs([8, 7, 2, 4, 6], 14))
+
+
+# with enumerate
+def all_pairs(lst,target):
+  res = []; lst.sort()
+  for i, n in enumerate(lst):
+    if target - n in lst [i+1:]:
+      res.append([n, target -n])
+  return sorted(res)
+print(all_pairs([2, 4, 5, 3, 1], 7))
+print(all_pairs([5, 3, 9, 2, 1], 3))
+print(all_pairs([8, 7, 7, 2, 4, 6], 14))
+print(all_pairs([8, 7, 2, 4, 6], 14))
+
+'''
 
 # solution with a hash table
 # O(n) time | O(n) space
