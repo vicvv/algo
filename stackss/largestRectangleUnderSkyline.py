@@ -21,9 +21,6 @@ Sample Input
 buildings = [1, 3, 3, 2, 4, 1, 5, 3, 2]
 '''
 
-
-
-
 def largestRectangleUnderSkyline(b):
     stack=[]
     maxA=0
@@ -38,7 +35,7 @@ def largestRectangleUnderSkyline(b):
 
     return maxA
 
-print(largestRectangleUnderSkyline([1, 3, 3, 2, 4, 1, 5, 3, 2]))
+#print(largestRectangleUnderSkyline([1, 3, 3, 2, 4, 1, 5, 3, 2]))
 
 import unittest
 class TestProgram(unittest.TestCase):
@@ -48,5 +45,5 @@ class TestProgram(unittest.TestCase):
         actual = largestRectangleUnderSkyline(input)
         self.assertEqual(actual, expected)
 
-# if __name__ == '__main__':
-#     unittest.main()
+if __name__ == '__main__':
+    unittest.main()
