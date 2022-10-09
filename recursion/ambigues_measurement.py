@@ -10,8 +10,7 @@ low integer and one high integer representing a range for a target measurement.
 Write a function that returns a boolean representing whether you can use the cups to
 accurately measure a volume in the specified [low, high] range (the range is
 inclusive).
-Note that:
-Each measuring cup will be represented by a pair of positive integers [L, H] ,
+Note that:Each measuring cup will be represented by a pair of positive integers [L, H],
 where 0 <= L <= H .
 You'll always be given at least one measuring cup, and the low and high
 input parameters will always satisfy the following constraint:

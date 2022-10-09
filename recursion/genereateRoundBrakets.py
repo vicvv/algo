@@ -1,7 +1,5 @@
 # this  is from leetcode
 
-
-
 def generateParenthesis(n):
     matchingperents = []
     dfs(n - 1, n, '(', matchingperents)

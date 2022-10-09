@@ -79,12 +79,9 @@ if __name__ == '__main__':
     fib_mm_times = [mm_fib(i) for i in X]
     fib_ia_times = [fib_ia(i) for i in X]
 
-#    print(fibslow_times)
-#    print(fibfast_times)
-#    print(fib_reduce_times)
 
     plt.figure()
-#    plt.plot(X, fibslow_times, label='Slow Fib')
+#   plt.plot(X, fibslow_times, label='Slow Fib')
     plt.plot(X, fibslow_2_times, label='Slow Fib w cache')
     plt.plot(X, fibfast_times, label='Fast Fib')
     plt.plot(X, fib_reduce_times, label='Reduce Fib')
